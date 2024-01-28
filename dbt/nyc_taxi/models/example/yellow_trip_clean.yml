@@ -2,10 +2,10 @@
 version: 2
 
 models:
-  - name: cody_sacks
+  - name: yellow_trip_clean
     config: 
       enabled: true
       tags: duckdb
       schema: stage
-      alias: cody_sacks
+      alias: test_model
       materialized: table
