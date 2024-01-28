@@ -1,2 +1,9 @@
 .env
-duckdb/*
+.venv/*
+.venv
+data
+data/*
+dagster/nyctaxi/nyctaxi/__pycache__/*
+dagster/nyctaxi/nyctaxi/__pycache__/
+dagster/nyctaxi/tmpuiuzwkk6
+duckdb/
