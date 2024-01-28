@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+nyctaxi/__init__.py
+nyctaxi/assets.py
+nyctaxi.egg-info/PKG-INFO
+nyctaxi.egg-info/SOURCES.txt
+nyctaxi.egg-info/dependency_links.txt
+nyctaxi.egg-info/requires.txt
+nyctaxi.egg-info/top_level.txt
