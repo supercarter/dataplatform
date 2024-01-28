@@ -9,6 +9,12 @@ s3fs = "*"
 pandas = "*"
 pyarrow = "*"
 python-dotenv = "*"
+duckdb = "*"
+dbt = "*"
+dbt-duckdb = "*"
+fsspec = "*"
+dagster = "*"
+dagster-webserver = "*"
 
 [dev-packages]
 
