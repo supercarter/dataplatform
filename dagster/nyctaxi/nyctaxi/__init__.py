@@ -23,7 +23,7 @@ defs = Definitions(
     assets=all_assets,
     resources={
         'duckdb': DuckDBResource(
-            database="duckdb/nyctaxi.duckdb"
+            database="../../duckdb/nyctaxi.duckdb"
         )
     },
     schedules=[nyc_taxi_schedule]

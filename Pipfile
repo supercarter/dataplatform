@@ -15,6 +15,8 @@ dbt-duckdb = "*"
 fsspec = "*"
 dagster = "*"
 dagster-webserver = "*"
+dagster-duckdb = "*"
+dagster-duckdb-pandas = "*"
 
 [dev-packages]
 
