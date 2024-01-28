@@ -1,10 +1,8 @@
 .env
 .venv/*
 .venv
-data
-data/*
 dagster/nyctaxi/nyctaxi/__pycache__/*
 dagster/nyctaxi/nyctaxi/__pycache__/
-duckdb/
 dagster/nyctaxi/tmp*
-data_lake/
+data_lake/*
+duckdb/*
