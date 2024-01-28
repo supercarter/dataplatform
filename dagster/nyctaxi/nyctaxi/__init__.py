@@ -3,8 +3,9 @@ from dagster import (
     Definitions,
     ScheduleDefinition,
     define_asset_job,
-    load_assets_from_modules,
+    load_assets_from_modules
 )
+from dagster_duckdb import DuckDBResource
 
 
 from . import assets
@@ -24,8 +25,11 @@ defs = Definitions(
         'duckdb': DuckDBResource(
             database="duckdb/nyctaxi.duckdb"
         )
-    }
+    },
     schedules=[nyc_taxi_schedule]
 )
+
+
+
 
 
