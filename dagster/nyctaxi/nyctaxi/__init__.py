@@ -9,7 +9,7 @@ from dagster_duckdb import DuckDBResource
 from dagster_dbt import DbtCliResource
 from pathlib import Path
 import os
-from .constants import dbt_manifest_path
+from .constants import dbt_project_dir
 
 from . import assets
 
@@ -29,7 +29,7 @@ defs = Definitions(
             database="../../duckdb/nyctaxi.duckdb"
         ),
         "dbt": DbtCliResource(
-            project_dir = "C:/Users/carte/august/dataplatform/dagster/nyctaxi/dbt_nyc_taxi"
+            project_dir = dbt_project_dir
         )
     }, 
     schedules=[nyc_taxi_schedule]

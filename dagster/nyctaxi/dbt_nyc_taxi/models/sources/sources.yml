@@ -6,3 +6,6 @@ sources:
     schema: stage
     tables:
       - name: yellow_trip
+        meta: 
+          dagster: 
+            asset_key: ['parquet_to_duckdb']
