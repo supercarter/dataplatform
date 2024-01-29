@@ -21,4 +21,12 @@ run `pip install -r requirements.txt` to install all dependencies
 ##### 7. Run dagster dev
 ##### 8. Open localhost:3000 in your browser
 
+# Notes on setting up dbt in dagster
+The constants.py file defines where the project yml file is for the dbt project. It also has logic to create the manifest.json file which dagster uses to integrate the dbt models. 
+
+You need to define an env var "DAGSTER_DBT_PARSE_PROJECT_ON_LOAD" = 1. I've done so in my .env file. 
+
+To connect your non-dbt assets to dbt models in the dag, you add the metadata info in the sources.yml file. 
+
+
 
