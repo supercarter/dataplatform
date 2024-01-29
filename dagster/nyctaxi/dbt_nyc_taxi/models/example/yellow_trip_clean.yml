@@ -1,0 +1,11 @@
+
+version: 2
+
+models:
+  - name: yellow_trip_clean
+    config: 
+      enabled: true
+      tags: duckdb
+      schema: stage
+      alias: test_model
+      materialized: table
