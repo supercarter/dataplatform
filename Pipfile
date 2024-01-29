@@ -17,6 +17,7 @@ dagster = "*"
 dagster-webserver = "*"
 dagster-duckdb = "*"
 dagster-duckdb-pandas = "*"
+dagster-dbt = "*"
 
 [dev-packages]
 
