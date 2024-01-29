@@ -4,6 +4,9 @@ import os
 import duckdb
 from dagster import asset, AssetExecutionContext, MaterializeResult, MetadataValue, AssetIn
 from dagster_duckdb import DuckDBResource
+from dagster_dbt import DbtCliResource, dbt_assets
+
+from .constants import dbt_manifest_path
 
 load_dotenv(override=True)
 aws_access_key_id = os.getenv('AWS_ACCESS_KEY_ID')
@@ -70,4 +73,7 @@ def parquet_to_duckdb(context: AssetExecutionContext, duckdb: DuckDBResource) ->
         conn.execute(f"CREATE OR REPLACE TABLE {yellow_trip_data_table} AS SELECT * FROM read_parquet('{data_lake_location}/yyyy=*/mm=*/*.parquet')")
         context.log.info('Successful.')
     
+@dbt_assets(manifest = dbt_manifest_path)
+def taxi_dbt_assets(context: AssetExecutionContext, dbt: DbtCliResource):
+    yield from dbt.cli(["build"], context=context).stream()
 
