@@ -14,7 +14,6 @@ aws_secret_access_key = os.getenv('AWS_SECRET_ACCESS_KEY')
 
 data_lake_location = '../../data_lake'
 
-
 @asset
 def get_next_month(duckdb: DuckDBResource) -> dict:
     with duckdb.get_connection() as conn:
@@ -36,7 +35,7 @@ def get_next_month(duckdb: DuckDBResource) -> dict:
 def read_nyc_taxi_raw(last_month) -> MaterializeResult:
     
     year = last_month['year'] # '2023'
-    month = last_month['month']  #  '01'
+    month = last_month['month'] # '01'
     s3_location = f's3://nyc-tlc/trip data/yellow_tripdata_{year}-{month}.parquet'
     filename = s3_location.split('/')[-1]
     partition_path = f'yyyy={year}/mm={month}'
@@ -72,8 +71,9 @@ def parquet_to_duckdb(context: AssetExecutionContext, duckdb: DuckDBResource) ->
         conn.execute('CREATE SCHEMA IF NOT EXISTS stage')
         conn.execute(f"CREATE OR REPLACE TABLE {yellow_trip_data_table} AS SELECT * FROM read_parquet('{data_lake_location}/yyyy=*/mm=*/*.parquet')")
         context.log.info('Successful.')
-    
+
+"""
 @dbt_assets(manifest = dbt_manifest_path)
 def taxi_dbt_assets(context: AssetExecutionContext, dbt: DbtCliResource):
     yield from dbt.cli(["build"], context=context).stream()
-
+"""

@@ -1,0 +1,15 @@
+polars
+s3fs
+pandas
+pyarrow
+python-dotenv
+duckdb
+dbt
+dbt-duckdb
+fsspec
+dagster
+dagster-webserver
+dagster-duckdb
+dagster-duckdb-pandas
+dagster-dbt
+chardet

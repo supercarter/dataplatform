@@ -2,7 +2,7 @@ nyc_taxi:
   outputs:
     dev:
       type: duckdb
-      path: C:\Users\carte\august\dataplatform\duckdb\nyctaxi.duckdb
+      path: /Users/riley/dataplatform/duckdb/nyctaxi.duckdb
       # extensions:
       #   - httpfs
       #   - parquet
