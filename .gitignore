@@ -1,6 +1,7 @@
 .env
 .venv/*
 .venv
+.DS_Store
 dagster/nyctaxi/nyctaxi/__pycache__/*
 dagster/nyctaxi/nyctaxi/__pycache__/
 dagster/nyctaxi/tmp*
