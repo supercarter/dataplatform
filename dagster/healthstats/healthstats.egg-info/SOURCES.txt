@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+healthstats/__init__.py
+healthstats/assets.py
+healthstats.egg-info/PKG-INFO
+healthstats.egg-info/SOURCES.txt
+healthstats.egg-info/dependency_links.txt
+healthstats.egg-info/requires.txt
+healthstats.egg-info/top_level.txt
