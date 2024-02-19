@@ -40,5 +40,9 @@ You need to define an env var "DAGSTER_DBT_PARSE_PROJECT_ON_LOAD" = 1. You can d
 
 To connect your non-dbt assets to dbt models in the dag, you add the metadata info in the sources.yml file. 
 
+# Data visualization 
+
+Currently supports cursory visualization of small (< 50 mb) datasets using streamlit. To use, run "streamlit run streamlit.py" in the data_viz_tools directory.
+
 
 
