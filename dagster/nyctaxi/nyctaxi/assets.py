@@ -14,6 +14,7 @@ aws_secret_access_key = os.getenv('AWS_SECRET_ACCESS_KEY')
 
 data_lake_location = '../../data_lake'
 
+
 @asset
 def get_next_month(duckdb: DuckDBResource) -> dict:
     with duckdb.get_connection() as conn:
@@ -72,8 +73,7 @@ def parquet_to_duckdb(context: AssetExecutionContext, duckdb: DuckDBResource) ->
         conn.execute(f"CREATE OR REPLACE TABLE {yellow_trip_data_table} AS SELECT * FROM read_parquet('{data_lake_location}/yyyy=*/mm=*/*.parquet')")
         context.log.info('Successful.')
 
-"""
+
 @dbt_assets(manifest = dbt_manifest_path)
 def taxi_dbt_assets(context: AssetExecutionContext, dbt: DbtCliResource):
     yield from dbt.cli(["build"], context=context).stream()
-"""

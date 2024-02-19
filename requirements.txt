@@ -13,3 +13,8 @@ dagster-duckdb
 dagster-duckdb-pandas
 dagster-dbt
 chardet
+bs4
+streamlit
+plotly
+scipy
+openpyxl
