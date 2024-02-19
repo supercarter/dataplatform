@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+polars = "*"
+s3fs = "*"
+pandas = "*"
+pyarrow = "*"
+python-dotenv = "*"
+duckdb = "*"
+dbt = "*"
+dbt-duckdb = "*"
+fsspec = "*"
+dagster = "*"
+dagster-webserver = "*"
+dagster-duckdb = "*"
+dagster-duckdb-pandas = "*"
+dagster-dbt = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

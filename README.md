@@ -42,7 +42,7 @@ To connect your non-dbt assets to dbt models in the dag, you add the metadata in
 
 # Data visualization 
 
-Currently supports cursory visualization of small (< 50 mb) datasets using streamlit. To use, run "streamlit run streamlit.py" in the data_viz_tools directory.
+Currently supports cursory visualization of small (< 50 MB) datasets using streamlit. To use, run "streamlit run streamlit.py" in the data_viz_tools directory.
 
 
 
