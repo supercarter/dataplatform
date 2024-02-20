@@ -114,7 +114,7 @@ def main():
         st.title("Load Data")
         datatab, desctab, enctab = st.tabs(["Data", "Descriptions", "Encodings"])
         with datatab:
-            datafile = st_file_browser(key = 'A', path=data_lake_location, show_preview=False, show_choose_file=True)
+            datafile = st_file_browser(key = 'A', path=data_lake_location, show_preview=False)
         with desctab:
             if st.checkbox( "Descriptions file (optional)", key="desccheck", help="File with descriptions of variables, first column should be variable name, second column should be description. Information in additional columns (>2) will be displayed below the graph."):
                 descfile = st_file_browser(key = 'B', path=data_lake_location, show_preview=False)
@@ -424,7 +424,6 @@ def join_data(data1, data2, case):
             df_join = df1.join(df2, how='inner')
         elif case == 4:
             # Sort data on ordered variable (e.g., time spent in US should order, but Gender should not)
-            st.write(data1.iloc[:5])
             digits1 = any(any(char.isdigit() for char in value) for value in data1.iloc[:5])
             digits2 = any(any(char.isdigit() for char in value) for value in data2.iloc[:5])
             if digits2 and not digits1:
